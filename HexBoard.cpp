@@ -257,7 +257,7 @@ player HexBoard::computer(player c){
     iterator = copyLegalMoves.erase(iterator); //Erase the move from the copy
 
     //Simulate outcome
-    for (int j = 0; j < 10; ++j){
+    for (int j = 0; j < 10000; ++j){
       player winner = simulate(copyBoard, p, copyLegalMoves);
       if (winner == c){
         wins++;
